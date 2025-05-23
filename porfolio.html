@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechDeavours</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/theme.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-... (truncated)" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="font-sans antialiased">
+
+<!-- Navbar Start -->
+<header class="bg-white shadow relative">
+  <div class="container mx-auto flex justify-between items-center p-4">
+    
+<!-- Logo -->
+<a href="index.html" class="flex items-center space-x-1 text-2xl font-bold">
+  <span class="text-black">Tech</span><span class="text-[var(--primary-color)]">Deavours</span>
+</a>
+
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden">
+      <button onclick="toggleMenu()" class="text-gray-800 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex space-x-8 items-center relative">
+      <a href="index.html" class="text-gray-600 hover:text-[var(--primary-color)] transition">Home</a>
+
+      <!-- Services Dropdown -->
+      <div class="relative group">
+        <a href="website-design.html" class="flex items-center text-gray-600 hover:text-[var(--primary-color)] cursor-pointer transition">
+          Services
+          <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </a>
+        <div class="absolute hidden group-hover:flex flex-col bg-white shadow rounded w-64 mt-2 z-50">
+          <a href="website-design.html" class="px-4 py-3 text-gray-700 hover:text-[var(--primary-color)] hover:bg-gray-100">Website Design & Development</a>
+          <a href="e-commerce.html" class="px-4 py-3 text-gray-700 hover:text-[var(--primary-color)] hover:bg-gray-100">Shopify & E-commerce</a>
+          <a href="mobile-app-development.html" class="px-4 py-3 text-gray-700 hover:text-[var(--primary-color)] hover:bg-gray-100">Mobile App Development</a>
+          <a href="custom-software.html" class="px-4 py-3 text-gray-700 hover:text-[var(--primary-color)] hover:bg-gray-100">Custom Software Development</a>
+        </div>
+      </div>
+
+      <a href="porfolio.html" class="text-gray-600 hover:text-[var(--primary-color)] transition">Portfolio</a>
+      <a href="about.html" class="text-gray-600 hover:text-[var(--primary-color)] transition">About</a>
+      <a href="contact.html" class="text-gray-600 hover:text-[var(--primary-color)] transition">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
+    <a href="index.html" class="block text-gray-600 hover:text-[var(--primary-color)] py-2">Home</a>
+    <div class="relative">
+      <button onclick="toggleServices()" class="w-full text-left text-gray-600 hover:text-[var(--primary-color)] py-2 flex items-center">
+        Services
+        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div id="services-submenu" class="hidden flex-col pl-4">
+        <a href="website-design.html" class="block px-2 py-2 text-gray-700 hover:text-[var(--primary-color)] hover:bg-gray-100">Website Design & Development</a>
+        <a href="shopify-development.html" class="block px-2 py-2 text-gray-700 hover:text-[var(--primary-color)] hover:bg-gray-100">Shopify & E-commerce</a>
+        <a href="mobile-app-development.html" class="block px-2 py-2 text-gray-700 hover:text-[var(--primary-color)] hover:bg-gray-100">Mobile App Development</a>
+        <a href="custom-software.html" class="block px-2 py-2 text-gray-700 hover:text-[var(--primary-color)] hover:bg-gray-100">Custom Software Development</a>
+      </div>
+    </div>
+    <a href="portfolio.html" class="block text-gray-600 hover:text-[var(--primary-color)] py-2">Portfolio</a>
+    <a href="about.html" class="block text-gray-600 hover:text-[var(--primary-color)] py-2">About</a>
+    <a href="contact.html" class="block text-gray-600 hover:text-[var(--primary-color)] py-2">Contact</a>
+  </div>
+</header>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  }
+  function toggleServices() {
+    document.getElementById('services-submenu').classList.toggle('hidden');
+  }
+</script>
+
+
+<!-- ======================================== -->
+<!-- Portfolio Header Section: Responsive Dark Banner -->
+<!-- ======================================== -->
+<section 
+  class="relative bg-cover bg-center bg-no-repeat text-white text-center px-4 py-20 sm:py-24 md:py-32" 
+  style="background-image: url('assets/images/portfolio_banner.jpg');"
+>
+  <!-- Dark Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+  <!-- Centered Content -->
+  <div class="relative z-10 max-w-4xl mx-auto">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold">Our Awesome Projects</h2>
+  </div>
+</section>
+
+
+<!-- ======================================== -->
+<!-- Portfolio Filter Buttons Section -->
+<!-- ======================================== -->
+<section class="bg-gray-50 py-10 px-4">
+  <div class="max-w-6xl mx-auto text-center">
+    <div class="inline-flex flex-wrap gap-3 justify-center">
+      
+      <!-- Website Button -->
+      <a href="/porfolio.html"
+   class="text-white font-medium px-5 py-2 rounded-md transition duration-300"
+   style="background-color: var(--primary-color);"
+   onmouseover="this.style.backgroundColor='var(--primary-hover)'"
+   onmouseout="this.style.backgroundColor='var(--primary-color)'">
+   Websites
+</a>
+
+      
+      <!-- Mobile App Button -->
+      <a href="/mobile_projects.html"
+      class="text-white font-medium px-5 py-2 rounded-md transition duration-300"
+      style="background-color: var(--primary-color);"
+      onmouseover="this.style.backgroundColor='var(--primary-hover)'"
+      onmouseout="this.style.backgroundColor='var(--primary-color)'">
+      Mobile Applications
+   </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- Portfolio Grid -->
+<section class="py-12 bg-gray-50">
+  <div class="container mx-auto px-4" >
+    <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3" id="portfolioGrid">
+      
+     <!-- Project 1: Website -->
+<a href="web_projects/recogni.html" 
+class="project-card bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col h-[400px]" 
+data-category="web">
+
+<!-- Image Container -->
+<div class="h-[300px] overflow-hidden">
+ <img src="/assets/portfolio/website_main_images/recongi.jpg" 
+      alt="Recogni" 
+      class="w-full h-full object-cover">
+</div>
+
+<!-- Text Content -->
+<div class="flex-1 p-6 text-center flex flex-col justify-end">
+ <h3 class="text-[var(--primary-color)] font-semibold text-lg">Recogni</h3>
+ <p class="text-sm text-gray-600">Artificial Intelligence</p>
+</div>
+</a>
+
+<!-- Project 2: Website -->
+<a href="web_projects/1stopchiro.html" 
+class="project-card bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col h-[400px]" 
+data-category="web">
+
+<!-- Image Container -->
+<div class="h-[300px] overflow-hidden">
+ <img src="/assets/portfolio/website_main_images/dev-1stopchiro-2021-08-17-04_11_33.png" 
+      alt="1StopChiro" 
+      class="w-full h-full object-cover">
+</div>
+
+<!-- Text Content -->
+<div class="flex-1 p-6 text-center flex flex-col justify-end">
+ <h3 class="text-[var(--primary-color)] font-semibold text-lg">1StopChiro</h3>
+ <p class="text-sm text-gray-600">Chiropractors Online Marketplace</p>
+</div>
+</a>
+
+
+      <a href="web_projects/iwillmessage.html" 
+   class="project-card bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col h-[400px]" 
+   data-category="mobile">
+
+  <!-- Fixed Image Section -->
+  <div class="h-[300px] overflow-hidden">
+    <img src="assets/portfolio/website_main_images/iwillmessage-2021-08-17-04_06_42.png" 
+         alt="iWillMessage" 
+         class="w-full h-full object-cover" />
+  </div>
+
+  <!-- Text Content -->
+  <div class="flex-1 p-6 text-center flex flex-col justify-end">
+    <h3 class="text-[var(--primary-color)] font-semibold text-lg">iWillMessage</h3>
+    <p class="text-sm text-gray-600">Communication Platform</p>
+  </div>
+</a>
+
+<!-- Project: Liquid IV Therapy (Website) -->
+<a href="web_projects/liquid-iv-therapy.html" 
+   class="project-card bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col h-[400px]"
+   data-category="web">
+  <div class="h-[300px] overflow-hidden">
+    <img src="/assets/portfolio/website_main_images/liquid-iv-therapy-2021-08-17-02_37_48.png" 
+         alt="Liquid IV Therapy" 
+         class="w-full h-full object-cover">
+  </div>
+  <div class="flex-1 p-6 text-center flex flex-col justify-end">
+    <h3 class="text-[var(--primary-color)] font-semibold text-lg">Liquid IV Therapy</h3>
+    <p class="text-sm text-gray-600">Healthcare Platform</p>
+  </div>
+</a>
+
+<!-- Project: Change to Solar (Website) -->
+<a href="web_projects/change-to-solar.html" 
+   class="project-card bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col h-[400px]"
+   data-category="web">
+  <div class="h-[300px] overflow-hidden">
+    <img src="assets/portfolio/website_main_images/change-to-solar.png" 
+         alt="Change to Solar" 
+         class="w-full h-full object-cover">
+  </div>
+  <div class="flex-1 p-6 text-center flex flex-col justify-end">
+    <h3 class="text-[var(--primary-color)] font-semibold text-lg">Change to Solar</h3>
+    <p class="text-sm text-gray-600">Solar Energy Services</p>
+  </div>
+</a>
+
+<!-- Project: My Freight Guys (Mobile App) -->
+<a href="web_projects/my-freight-guys.html" 
+   class="project-card bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col h-[400px]"
+   data-category="mobile">
+  <div class="h-[300px] overflow-hidden">
+    <img src="/assets/portfolio/website_main_images/Layer-2-1172x2048.png" 
+         alt="My Freight Guys" 
+         class="w-full h-full object-cover">
+  </div>
+  <div class="flex-1 p-6 text-center flex flex-col justify-end">
+    <h3 class="text-[var(--primary-color)] font-semibold text-lg">My Freight Guys</h3>
+    <p class="text-sm text-gray-600">Logistic Services</p>
+  </div>
+</a>
+<script>
+  const buttons = document.querySelectorAll('button[data-filter]');
+  const cards = document.querySelectorAll('.project-card');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const category = button.getAttribute('data-filter');
+
+      cards.forEach(card => {
+        card.style.display = (category === 'all' || card.dataset.category === category)
+          ? 'block'
+          : 'none';
+      });
+    });
+  });
+</script>
+
+</section>
+
+   <!-- Footer -->
+   <footer class="bg-black text-white pt-12 pb-6 relative">
+    <div class="container mx-auto px-4 flex flex-col lg:flex-row justify-between items-start text-left">
+      
+      <!-- Left: Brand Name and Description -->
+      <div class="mb-6 lg:mb-0">
+        <div class="flex flex-col items-start">
+          <!-- Brand Text Instead of Logo -->
+          <div class="text-2xl font-bold mb-4">
+            <span class="text-white">Tech</span><span class="text-[var(--primary-color)]">Deavours</span>
+          </div>
+          <p class="max-w-sm text-gray-400 text-sm leading-relaxed">
+            TechDeavours is a leading web design agency with an award-winning design team that creates responsive and effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business.
+          </p>
+        </div>
+      </div>
+  
+      <!-- Middle: Social Icons -->
+      <div class="mb-6 lg:mb-0 flex space-x-3">
+        <a href="#" class="bg-[var(--primary-color)] text-white w-10 h-10 flex items-center justify-center rounded-full hover:bg-[var(--primary-hover)] transition">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="bg-[var(--primary-color)] text-white w-10 h-10 flex items-center justify-center rounded-full hover:bg-[var(--primary-hover)] transition">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="bg-[var(--primary-color)] text-white w-10 h-10 flex items-center justify-center rounded-full hover:bg-[var(--primary-hover)] transition">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      
+  
+      <!-- Right: Links -->
+      <div class="flex flex-col items-start space-y-2">
+        <p class="text-sm text-[var(--primary-color)] font-semibold">TechDeavours Inc. ©2025 All rights reserved.</p>
+        <div class="space-x-4 text-sm text-white">
+          <a href="#" class="hover:text-[var(--primary-color)]">Privacy Policy</a>
+          <a href="#" class="hover:text-[var(--primary-color)]">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Scroll to Top -->
+    <div class="absolute bottom-6 right-6">
+      <a href="#top" class="bg-[var(--primary-color)] p-2 rounded shadow hover:bg-[var(--primary-hover)] transition">
+        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 3a1 1 0 01.707.293l5 5a1 1 0 11-1.414 1.414L11 6.414V17a1 1 0 11-2 0V6.414L5.707 9.707A1 1 0 114.293 8.293l5-5A1 1 0 0110 3z" clip-rule="evenodd" />
+        </svg>
+      </a>
+    </div>
+  </footer>
+  
+  
+  <script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  }
+  </script>
+  
+  </body>
+  </html>
+  

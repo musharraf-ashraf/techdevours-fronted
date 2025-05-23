@@ -1,0 +1,14 @@
+/* theme.css */
+:root {
+    --primary-color: #FF7A59  !important;;
+    --primary-hover: #e86449  !important;;
+  }
+ /* Apply primary color to all headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+}
+
+
+.theme-icon {
+  filter: brightness(0) saturate(100%) invert(70%) sepia(39%) saturate(447%) hue-rotate(328deg) brightness(102%) contrast(101%);
+}

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechDeavours</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/theme.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-... (truncated)" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="font-sans antialiased">
+
+<!-- Navbar Start -->
+<header class="bg-white shadow relative">
+  <div class="container mx-auto flex justify-between items-center p-4">
+    
+<!-- Logo -->
+<a href="index.html" class="flex items-center space-x-1 text-2xl font-bold">
+  <span class="text-black">Tech</span><span class="text-[var(--primary-color)]">Deavours</span>
+</a>
+
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden">
+      <button onclick="toggleMenu()" class="text-gray-800 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex space-x-8 items-center relative">
+      <a href="index.html" class="text-gray-600 hover:text-[var(--primary-color)] transition">Home</a>
+
+      <!-- Services Dropdown -->
+      <div class="relative group">
+        <a href="website-design.html" class="flex items-center text-gray-600 hover:text-[var(--primary-color)] cursor-pointer transition">
+          Services
+          <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </a>
+        <div class="absolute hidden group-hover:flex flex-col bg-white shadow rounded w-64 mt-2 z-50">
+          <a href="website-design.html" class="px-4 py-3 text-gray-700 hover:text-[var(--primary-color)] hover:bg-gray-100">Website Design & Development</a>
+          <a href="e-commerce.html" class="px-4 py-3 text-gray-700 hover:text-[var(--primary-color)] hover:bg-gray-100">Shopify & E-commerce</a>
+          <a href="mobile-app-development.html" class="px-4 py-3 text-gray-700 hover:text-[var(--primary-color)] hover:bg-gray-100">Mobile App Development</a>
+          <a href="custom-software.html" class="px-4 py-3 text-gray-700 hover:text-[var(--primary-color)] hover:bg-gray-100">Custom Software Development</a>
+        </div>
+      </div>
+
+      <a href="porfolio.html" class="text-gray-600 hover:text-[var(--primary-color)] transition">Portfolio</a>
+      <a href="about.html" class="text-gray-600 hover:text-[var(--primary-color)] transition">About</a>
+      <a href="contact.html" class="text-gray-600 hover:text-[var(--primary-color)] transition">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
+    <a href="index.html" class="block text-gray-600 hover:text-[var(--primary-color)] py-2">Home</a>
+    <div class="relative">
+      <button onclick="toggleServices()" class="w-full text-left text-gray-600 hover:text-[var(--primary-color)] py-2 flex items-center">
+        Services
+        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div id="services-submenu" class="hidden flex-col pl-4">
+        <a href="website-design.html" class="block px-2 py-2 text-gray-700 hover:text-[var(--primary-color)] hover:bg-gray-100">Website Design & Development</a>
+        <a href="shopify-development.html" class="block px-2 py-2 text-gray-700 hover:text-[var(--primary-color)] hover:bg-gray-100">Shopify & E-commerce</a>
+        <a href="mobile-app-development.html" class="block px-2 py-2 text-gray-700 hover:text-[var(--primary-color)] hover:bg-gray-100">Mobile App Development</a>
+        <a href="custom-software.html" class="block px-2 py-2 text-gray-700 hover:text-[var(--primary-color)] hover:bg-gray-100">Custom Software Development</a>
+      </div>
+    </div>
+    <a href="portfolio.html" class="block text-gray-600 hover:text-[var(--primary-color)] py-2">Portfolio</a>
+    <a href="about.html" class="block text-gray-600 hover:text-[var(--primary-color)] py-2">About</a>
+    <a href="contact.html" class="block text-gray-600 hover:text-[var(--primary-color)] py-2">Contact</a>
+  </div>
+</header>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  }
+  function toggleServices() {
+    document.getElementById('services-submenu').classList.toggle('hidden');
+  }
+</script>
+
+<body class="font-sans antialiased">
+
+
+  <section class="relative bg-gray-100 bg-cover bg-center py-20" style="background-image: url('/assets/images/appDesign_banner.jpg');">
+    <div class="container mx-auto flex flex-col justify-center items-start px-6 lg:pl-20">
+  
+      <!-- Text Content -->
+      <div class="bg-transparent bg-opacity-80 p-8 rounded-lg max-w-lg">
+        <h2 class="text-3xl md:text-5xl font-bold mb-6 text-gray-900">
+          Mobile App<br>
+          <span class="text-[var(--primary-color)]">Design & Development</span>
+        </h2>
+  
+        <p class="text-lg text-gray-700 mb-6">Our Specialization:</p>
+  
+        <div class="grid grid-cols-2 gap-4 text-gray-700 mb-8">
+          <div class="flex items-center gap-2">
+            <i class="fab fa-apple text-2xl text-[var(--primary-color)]"></i>
+            <span>iOS App</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fas fa-project-diagram text-2xl text-[var(--primary-color)]"></i>
+            <span>Prototype</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fab fa-android text-2xl text-[var(--primary-color)]"></i>
+            <span>Android</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fas fa-sync-alt text-2xl text-[var(--primary-color)]"></i>
+            <span>App Upgrades</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fas fa-code-branch text-2xl text-[var(--primary-color)]"></i>
+            <span>Hybrid</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fas fa-pencil-ruler text-2xl text-[var(--primary-color)]"></i>
+            <span>App Design</span>
+          </div>
+        </div>
+  
+        <a href="contact.html" class="inline-block bg-[var(--primary-color)] hover:bg-[var(--primary-hover)] text-white font-medium py-3 px-8 rounded-lg transition">
+          Schedule a Consultation
+        </a>
+      </div>
+  
+    </div>
+  </section>
+  
+  
+      <section class="py-12 px-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 text-[color:var(--primary-color)]">
+          Mobile App Development Services
+        </h2>
+        <p class="text-center font-semibold text-gray-800 mb-10">
+          Built with Purpose & Passion
+        </p>
+      
+        <!-- Services Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div class="flex flex-col items-center text-center">
+            <img src="/assets/portfolio/web_development_section/prototype_icon.svg" alt="Prototype" class="h-16 mb-4 theme-icon">
+            <p class="text-sm font-semibold text-gray-800">Prototype</p>
+          </div>
+      
+          <div class="flex flex-col items-center text-center">
+            <img src="/assets/portfolio/web_development_section/businessUp_icon.svg" alt="Business Upgrades" class="h-16 mb-4 theme-icon">
+            <p class="text-sm font-semibold text-gray-800">Business Upgrades</p>
+          </div>
+      
+          <div class="flex flex-col items-center text-center">
+            <img src="/assets/portfolio/web_development_section/appDesign_icon.svg" alt="App Designs" class="h-16 mb-4 theme-icon">
+            <p class="text-sm font-semibold text-gray-800">App Designs</p>
+          </div>
+      
+          <div class="flex flex-col items-center text-center">
+            <img src="/assets/portfolio/web_development_section/hybridApp_icon.svg" alt="Hybrid Apps" class="h-16 mb-4 theme-icon">
+            <p class="text-sm font-semibold text-gray-800">Hybrid Apps</p>
+          </div>
+      
+          <div class="flex flex-col items-center text-center">
+            <img src="/assets/portfolio/web_development_section/iosDevelop_icon.svg" alt="iOS Development" class="h-16 mb-4 theme-icon">
+            <p class="text-sm font-semibold text-gray-800">iOS Development</p>
+          </div>
+      
+          <div class="flex flex-col items-center text-center">
+            <img src="/assets/portfolio/web_development_section/android_icon.svg" alt="Android Development" class="h-16 mb-4 theme-icon">
+            <p class="text-sm font-semibold text-gray-800">Android Development</p>
+          </div>
+      
+          <div class="flex flex-col items-center text-center">
+            <img src="/assets/portfolio/web_development_section/rescue_icon.svg" alt="Rescue Projects" class="h-16 mb-4 theme-icon">
+            <p class="text-sm font-semibold text-gray-800">Rescue Projects</p>
+          </div>
+      
+          <div class="flex flex-col items-center text-center">
+            <img src="/assets/portfolio/web_development_section/productStrategy_icon.svg" alt="Product Management & Strategy" class="h-16 mb-4 theme-icon">
+            <p class="text-sm font-semibold text-gray-800">Product Management &<br>Strategy</p>
+          </div>
+        </div>
+      </section>
+
+      
+  <!-- MOBILE development cycle -->
+<section class="w-full bg-gray-50 py-10">
+  <div class="container mx-auto px-6 lg:px-20">
+    <div class="flex flex-col-reverse md:flex-row items-start md:items-center gap-y-8 md:gap-x-4">
+
+      <!-- Image on Left -->
+      <div class="w-full md:w-1/2 flex justify-center md:justify-start">
+        <img src="/assets/portfolio/mobile_development/mobile-application-development.png" 
+             alt="App Development Process"
+             class="max-w-full max-h-[240px] object-contain rounded shadow-md">
+      </div>
+
+      <!-- Text Content -->
+      <div class="w-full md:w-1/2">
+        <h2 class="text-2xl md:text-3xl font-bold mb-3">
+          Mobile app <br>
+          <span class="text-[var(--primary-color)]">Development Process</span>
+        </h2>
+        <p class="text-gray-700 mb-4 text-sm">
+          We provide End-To-End Design And Development Solutions
+        </p>
+        <a href="contact.html" class="inline-block bg-[var(--primary-color)] text-white text-sm px-5 py-2 rounded-md hover:opacity-90 transition">
+          Request a Quote
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+          
+      
+  <section class="flex flex-col md:flex-row w-full">
+    <!-- Left: Image -->
+    <div class="w-full md:w-1/2">
+      <img src="/assets/portfolio/web_development_section/digital_agency.jpg" alt="Full Service Digital Agency" class="w-full h-full object-cover">
+    </div>
+  
+    <!-- Right: Content -->
+    <div class="w-full md:w-1/2 bg-black text-white flex flex-col justify-center p-8 md:p-16">
+      <h2 class="text-3xl font-bold mb-4">Full Service Digital Agency</h2>
+      <p class="text-gray-300 mb-6">
+        From Web and Mobile App Design & Development to Online Marketing Campaigns, TechNerds help brands and businesses increase visibility, engagement, and revenue.
+      </p>
+      <a href="contact.html" class="bg-[var(--primary-color)] text-white font-semibold p-3  w-40 rounded-lg h-12  text-center hover:bg-[var(--primary-hover)] inline-block">
+      Let's Talk
+      </a>
+    </div>
+  </section>
+
+
+  
+  <section class="bg-white py-16">
+    <div class="container mx-auto flex flex-col md:flex-row items-center px-6 gap-10">
+      
+      <!-- Left Content -->
+      <div class="md:w-1/2">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4 text-gray-900">We Work Directly With You</h2>
+        <h3 class="text-xl text-[var(--primary-color)] font-semibold mb-6">We facilitate projects with our Collaborative Platform</h3>
+        <p class="text-gray-600 mb-8">
+          Access your virtual desk with your dedicated team. Ready to execute tasks according to the plan.
+          Here’s what you can do from your dashboard:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+          <div class="flex items-center gap-2">
+            <i class="fas fa-check-circle text-[var(--primary-color)]"></i>
+            <span class="text-gray-700">View Activity Stream</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fas fa-check-circle text-[var(--primary-color)]"></i>
+            <span class="text-gray-700">Chat Message</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fas fa-check-circle text-[var(--primary-color)]"></i>
+            <span class="text-gray-700">Monitor Project</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fas fa-check-circle text-[var(--primary-color)]"></i>
+            <span class="text-gray-700">Schedule Meetings</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fas fa-check-circle text-[var(--primary-color)]"></i>
+            <span class="text-gray-700">Calendar</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fas fa-check-circle text-[var(--primary-color)]"></i>
+            <span class="text-gray-700">Add/Remove Tasks</span>
+          </div>
+        </div>
+        <a href="contact.html" class="bg-[var(--primary-color)] text-white font-semibold py-2 px-6 rounded hover:bg-[var(--primary-hover)] inline-block">Request a Quote</a>
+      </div>
+  
+      <!-- Right Image -->
+      <div class="md:w-1/2 flex justify-center">
+        <img src="assets/images/bitrix1.jpg" alt="Collaborative Platform" class="rounded-lg shadow-md">
+      </div>
+  
+    </div>
+  </section>
+  
+
+<<section class="bg-gray-50 py-16">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-[var(--primary-color)] font-semibold mb-2 text-lg">Creative & Smart Design</h2>
+    <h3 class="text-2xl font-bold text-gray-800 mb-10">From Our Latest Projects</h3>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
+      <img src="assets/portfolio/mobile_development/Fairy Fill.png" alt="Project 1" class="h-[400px] object-contain">
+      <img src="/assets/portfolio/mobile_development/FlutterLove.png" alt="Project 2" class="h-[400px] object-contain">
+      <img src="/assets/portfolio/mobile_development/iWillMessage.png" alt="Project 3" class="h-[400px] object-contain">
+      <img src="assets/portfolio/mobile_development/Quick Fill.png" alt="Project 4" class="h-[400px] object-contain">
+    </div>
+  </div>
+</section>
+
+
+<section class="w-full bg-white py-12 px-4 md:px-8 text-center">
+  <div class="max-w-5xl mx-auto">
+    <h1 class="text-2xl md:text-4xl font-bold mb-4" style="color: var(--primary-color);">
+      It’s not the dreamers that are remembered. It’s the doers.
+    </h1>
+    <p class="text-lg md:text-xl text-gray-700 mb-6">
+      Bring Your Vision To Life.
+    </p>
+    <button
+      class="text-white font-semibold py-2 px-6 rounded-md transition duration-300"
+      style="background-color: var(--primary-color);"
+      onmouseover="this.style.backgroundColor='var(--primary-hover)'"
+      onmouseout="this.style.backgroundColor='var(--primary-color)'"
+    >
+      Get in Touch
+    </button>
+    <div class="flex flex-wrap justify-center items-center gap-8 mt-8">
+      <!-- Trustpilot -->
+      <div class="flex items-center space-x-2">
+        <img src="assets/portfolio/mobile_development/trustpilot-black.png" alt="Trustpilot" class="h-6">
+        <span class="text-sm font-semibold text-gray-800">Trustpilot</span>
+        <span class="text-sm" style="color: var(--primary-color);">★★★★★</span>
+      </div>
+      <!-- Google Reviews -->
+      <div class="flex items-center space-x-2">
+        <img src="assets/portfolio/mobile_development/google_review.png" alt="Google" class="h-6">
+        <span class="text-sm font-semibold text-gray-800">Reviews</span>
+        <span class="text-sm text-yellow-500">★★★★★</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-white py-16 px-4 md:px-8 text-center">
+  <div class="max-w-6xl mx-auto">
+    <!-- Heading -->
+    <h2 class="text-2xl md:text-4xl font-bold mb-2">
+      <span style="color: var(--primary-color);">We are Grateful to Work</span>
+      <span class="text-black"> with Amazing Clients</span>
+    </h2>
+
+    <!-- Testimonials -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-12 text-sm text-gray-600">
+      <!-- Testimonial 1 -->
+      <div class="flex flex-col items-center">
+        <svg class="h-6 text-gray-400 mb-4" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M9 11.75A3.75 3.75 0 0 0 5.25 15.5v1.75a.75.75 0 0 0 .75.75H9a.75.75 0 0 0 .75-.75V11.75zm0-1.5V7a3 3 0 1 0-6 0v3.25a.75.75 0 0 0 .75.75H9a.75.75 0 0 0 .75-.75zm12 1.5A3.75 3.75 0 0 0 17.25 15.5v1.75a.75.75 0 0 0 .75.75H21a.75.75 0 0 0 .75-.75V11.75zm0-1.5V7a3 3 0 1 0-6 0v3.25a.75.75 0 0 0 .75.75H21a.75.75 0 0 0 .75-.75z"/>
+        </svg>
+        <p class="mb-6">The team has really been a pleasure to work with and I look forward to working with them again on many projects in the future. Going to them with my problem was the best thing I could have done. TechNerds sorted the issues and improved what we do online. They did it in a very quick turnaround too. Awesome!</p>
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Hunter Thompson" class="w-12 h-12 rounded-full mb-2 mt-4">
+        <p class="font-semibold">Hunter Thompson</p>
+        <p class="text-[var(--primary-color)] font-semibold">CFC Mentorship</p>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="flex flex-col items-center">
+        <svg class="h-6 text-gray-400 mb-4" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M9 11.75A3.75 3.75 0 0 0 5.25 15.5v1.75a.75.75 0 0 0 .75.75H9a.75.75 0 0 0 .75-.75V11.75zm0-1.5V7a3 3 0 1 0-6 0v3.25a.75.75 0 0 0 .75.75H9a.75.75 0 0 0 .75-.75zm12 1.5A3.75 3.75 0 0 0 17.25 15.5v1.75a.75.75 0 0 0 .75.75H21a.75.75 0 0 0 .75-.75V11.75zm0-1.5V7a3 3 0 1 0-6 0v3.25a.75.75 0 0 0 .75.75H21a.75.75 0 0 0 .75-.75z"/>
+        </svg>
+        <p class="mb-6">Solid company. Organizational infrastructure to deliver on their service model and customer promises is sound. Arguably the most responsive IT team I've worked with in any capacity. Would recommend to others and will continue to work with this organization as future projects come up. Feel free to reach me for a personal recommendation.</p>
+        <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Micah Driver" class="w-12 h-12 rounded-full mb-2">
+        <p class="font-semibold">Micah Driver</p>
+        <p class="text-[var(--primary-color)] font-semibold">Celina Health & Wellness</p>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="flex flex-col items-center">
+        <svg class="h-6 text-gray-400 mb-4" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M9 11.75A3.75 3.75 0 0 0 5.25 15.5v1.75a.75.75 0 0 0 .75.75H9a.75.75 0 0 0 .75-.75V11.75zm0-1.5V7a3 3 0 1 0-6 0v3.25a.75.75 0 0 0 .75.75H9a.75.75 0 0 0 .75-.75zm12 1.5A3.75 3.75 0 0 0 17.25 15.5v1.75a.75.75 0 0 0 .75.75H21a.75.75 0 0 0 .75-.75V11.75zm0-1.5V7a3 3 0 1 0-6 0v3.25a.75.75 0 0 0 .75.75H21a.75.75 0 0 0 .75-.75z"/>
+        </svg>
+        <p class="mb-6">We hired TechNerds 18 months ago and they are the best website design developers out there. With affordable price and Imran the owner of TechNerds customizes to make sure you get what is needed for an amazing website. I highly recommend his services as he cares about all of his clients to make sure they get everything 100 percent and more!</p>
+        <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="William Fazio" class="w-12 h-12 rounded-full mb-2">
+        <p class="font-semibold">William Fazio</p>
+        <p class="text-[var(--primary-color)] font-semibold">Dream Date Destinations</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    
+   <!-- Footer -->
+   <footer class="bg-black text-white pt-12 pb-6 relative">
+    <div class="container mx-auto px-4 flex flex-col lg:flex-row justify-between items-start text-left">
+      
+      <!-- Left: Brand Name and Description -->
+      <div class="mb-6 lg:mb-0">
+        <div class="flex flex-col items-start">
+          <!-- Brand Text Instead of Logo -->
+          <div class="text-2xl font-bold mb-4">
+            <span class="text-white">Tech</span><span class="text-[var(--primary-color)]">Deavours</span>
+          </div>
+          <p class="max-w-sm text-gray-400 text-sm leading-relaxed">
+            TechDeavours is a leading web design agency with an award-winning design team that creates responsive and effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business.
+          </p>
+        </div>
+      </div>
+  
+      <!-- Middle: Social Icons -->
+      <div class="mb-6 lg:mb-0 flex space-x-3">
+        <a href="#" class="bg-[var(--primary-color)] text-white w-10 h-10 flex items-center justify-center rounded-full hover:bg-[var(--primary-hover)] transition">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="bg-[var(--primary-color)] text-white w-10 h-10 flex items-center justify-center rounded-full hover:bg-[var(--primary-hover)] transition">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="bg-[var(--primary-color)] text-white w-10 h-10 flex items-center justify-center rounded-full hover:bg-[var(--primary-hover)] transition">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      
+  
+      <!-- Right: Links -->
+      <div class="flex flex-col items-start space-y-2">
+        <p class="text-sm text-[var(--primary-color)] font-semibold">TechDeavours Inc. ©2025 All rights reserved.</p>
+        <div class="space-x-4 text-sm text-white">
+          <a href="#" class="hover:text-[var(--primary-color)]">Privacy Policy</a>
+          <a href="#" class="hover:text-[var(--primary-color)]">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Scroll to Top -->
+    <div class="absolute bottom-6 right-6">
+      <a href="#top" class="bg-[var(--primary-color)] p-2 rounded shadow hover:bg-[var(--primary-hover)] transition">
+        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 3a1 1 0 01.707.293l5 5a1 1 0 11-1.414 1.414L11 6.414V17a1 1 0 11-2 0V6.414L5.707 9.707A1 1 0 114.293 8.293l5-5A1 1 0 0110 3z" clip-rule="evenodd" />
+        </svg>
+      </a>
+    </div>
+  </footer>
+  
+  
+  <script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  }
+  </script>
+  
+  </body>
+  </html>
+  
