@@ -1,1 +1,0 @@
-# techdevours-fronted
